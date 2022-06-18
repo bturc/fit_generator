@@ -94,7 +94,7 @@ def show_fit(generated_fit):
 
     articles_flat_list = list(np.concatenate(articles_flat_list).flat)
 
-    fig, axes = plt.subplots(1, n_articles_total)
+    fig, axes = plt.subplots(1, n_articles_total, figsize=(16, 8))
     for idx, path in enumerate(articles_flat_list):
         axes[idx].imshow(mpimg.imread(path))
         axes[idx].axis('off')
